@@ -6,7 +6,7 @@ import { PokemonContext } from '../../context/PokemonContext'
 
 function Nav() {
 	const {numero} = useContext(PokemonContext)
-	console.log(numero);
+	
 	return (
 		<div>
 			<header className='container'>
