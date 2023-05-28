@@ -1,9 +1,11 @@
 import React from 'react'
 import './HomePage.css'
+import { PokemonList } from '../../components'
 
 function HomePage() {
   return (
-    <div className='container-filter container'>
+    <>
+		<div className='container-filter container'>
 			<div className='icon-filter' >
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -21,7 +23,9 @@ function HomePage() {
 				</svg>
 				<span>Filtrar</span>
 			</div>
-	  </div>
+	  	</div>
+		<PokemonList/>
+	</>
   )
 }
 

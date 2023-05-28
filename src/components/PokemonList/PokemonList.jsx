@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import './PokemonList.css'
+import { PokemonContext } from '../../context/PokemonContext'
+import { CardPokemon } from '../CardPokemon/CardPokemon'
 
 function PokemonList() {
-  return (
-    <div>PokemonList</div>
-  )
+
+    const {allPokemons}= useContext(PokemonContext)
+
+    return (
+        <>
+            <div className="card-list-pokemon container">
+                {allPokemons.map(pokemon => (
+                    <CardPokemon pokemon={pokemon} key={pokemon.id}  />
+                ))}
+            </div>
+        </>
+    )
 }
 
 export {PokemonList}
