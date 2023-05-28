@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomePage.css'
-import { PokemonList } from '../../components'
+import { FilterBar, PokemonList } from '../../components'
 
 function HomePage() {
   return (
@@ -25,6 +25,7 @@ function HomePage() {
 			</div>
 	  	</div>
 		<PokemonList/>
+		<FilterBar/>
 	</>
   )
 }
