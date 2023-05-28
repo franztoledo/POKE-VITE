@@ -46,71 +46,108 @@ body{
 .water {
 	background-color: var(--color-water);
 }
-
+.number-pokemon-water{
+	color: var(--color-water);
+}
 .grass {
 	background-color: var(--color-grass);
 }
-
+.number-pokemon-grass{
+	color: var(--color-grass);
+}
 .poison {
 	background-color: var(--color-poison);
 }
-
+.number-pokemon-poison{
+	color: var(--color-poison);
+}
 .fire {
 	background-color: var(--color-fire);
 }
-
+.number-pokemon-fire{
+	color: var(--color-fire);
+}
 .bug {
 	background-color: var(--color-bug);
 }
-
+.number-pokemon-bug{
+	color: var(--color-bug);
+}
 .dragon {
 	background: var(--color-dragon);
 }
-
+.number-pokemon-dragon{
+	color: var(--color-dragon);
+}
 .flying {
 	background-color: var(--color-flying);
 }
-
+.number-pokemon-flying{
+	color: var(--color-flying);
+}
 .ground {
 	background-color: var(--color-ground);
 }
-
+.number-pokemon-ground{
+	color: var(--color-ground);
+}
 .steel {
 	background-color: var(--color-steel);
 }
-
+.number-pokemon-steel{
+	color: var(--color-steel);
+}
 .psychic {
 	background-color: var(--color-psychic);
 }
-
+.number-pokemon-psychic{
+	color: var(--color-psychic);
+}
 .ice {
 	background-color: var(--color-ice);
 }
-
+.number-pokemon-ice{
+	color: var(--color-ice);
+}
 .ghost {
 	background-color: var(--color-ghost);
 }
-
+.number-pokemon-ghost{
+	color: var(--color-ghost);
+}
 .normal {
 	background-color: var(--color-normal);
 }
-
+.number-pokemon-normal{
+	color: var(--color-normal);
+}
 .rock {
 	background-color: var(--color-rock);
 }
-
+.number-pokemon-rock{
+	color: var(--color-rock);
+}
 .electric {
 	background-color: var(--color-electric);
 }
-
+.number-pokemon-electric{
+	color: var(--color-electric);
+}
 .fighting {
 	background-color: var(--color-fighting);
 }
-
+.number-pokemon-fighting{
+	color: var(--color-fighting);
+}
 .fairy {
 	background-color: var(--color-fairy);
 }
-
+.number-pokemon-fairy{
+	color: var(--color-fairy);
+}
 .dark {
 	background-color: var(--color-dark);
+}
+.number-pokemon-dark{
+	color: var(--color-dark);
 }
