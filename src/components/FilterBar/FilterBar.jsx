@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './FilterBar.css'
 import { PokemonContext } from '../../context/PokemonContext'
 function FilterBar() {
-    const {active}=useContext(PokemonContext)
+    const {active, handleCheckbox}=useContext(PokemonContext)
 
     return (
         <div className={`container-filters ${active ? 'active' : ''}`}>
@@ -11,6 +11,7 @@ function FilterBar() {
                 <div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='grass'
 						id='grass'
 					/>
@@ -19,6 +20,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='fire'
 						id='fire'
 					/>
@@ -27,6 +29,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='bug'
 						id='bug'
 					/>
@@ -35,6 +38,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='fairy'
 						id='fairy'
 					/>
@@ -43,6 +47,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='dragon'
 						id='dragon'
 					/>
@@ -51,6 +56,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='shadow'
 						id='shadow'
 					/>
@@ -59,6 +65,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='ground'
 						id='ground'
 					/>
@@ -67,6 +74,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='normal'
 						id='normal'
 					/>
@@ -75,6 +83,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='psychic'
 						id='psychic'
 					/>
@@ -83,6 +92,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='steel'
 						id='steel'
 					/>
@@ -91,6 +101,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='dark'
 						id='dark'
 					/>
@@ -99,6 +110,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='electric'
 						id='electric'
 					/>
@@ -107,6 +119,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='fighting'
 						id='fighting'
 					/>
@@ -115,6 +128,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='flying'
 						id='flying'
 					/>
@@ -123,6 +137,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='ice'
 						id='ice'
 					/>
@@ -131,6 +146,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='poison'
 						id='poison'
 					/>
@@ -139,6 +155,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='rock'
 						id='rock'
 					/>
@@ -147,6 +164,7 @@ function FilterBar() {
 				<div className='group-type'>
 					<input
 						type='checkbox'
+                        onChange={handleCheckbox}
 						name='water'
 						id='water'
 					/>

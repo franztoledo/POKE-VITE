@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './HomePage.css'
 import { FilterBar, PokemonList } from '../../components'
+import { PokemonContext } from '../../context/PokemonContext'
 
 function HomePage() {
-  return (
+	const {active, setActive}=useContext(PokemonContext)
+
+  	return (
     <>
 		<div className='container-filter container'>
-			<div className='icon-filter' >
+			<div className='icon-filter' onClick={()=>setActive(!active)} >
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					fill='none'
