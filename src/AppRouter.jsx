@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { Nav } from './components/Nav'
+import { Nav } from './components/Nav/Nav'
 import { HomePage, PokemonPage, Searchpage } from './pages'
 
 export const AppRouter = () => {
