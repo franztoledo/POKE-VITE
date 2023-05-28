@@ -4,6 +4,11 @@ import { PokemonContext } from './PokemonContext'
 const PokemonProvider = ({children}) => {
     const [allPokemons, setAllPokemons] = useState([])
     const [globalPokemons, setGlobalPokemons] = useState([])
+
+    //Estados para la app
+    const [loading, setLoading] = useState(true)
+    const [active, setActive] = useState(false)
+
     const [offset, setOffset] = useState(0)
     const baseURL = 'https://pokeapi.co/api/v2/'
     // llamar 50 pokemons 
@@ -17,7 +22,8 @@ const PokemonProvider = ({children}) => {
             return data
         })
         const results = await Promise.all(promises)
-        setAllPokemons(results);
+        setAllPokemons([...allPokemons, ...results]);
+        setLoading(false)
     
     }
 
@@ -33,6 +39,7 @@ const PokemonProvider = ({children}) => {
         })
         const results = await Promise.all(promises)
         setGlobalPokemons(results);
+        setLoading(false)
     }
 
     //POR ID
