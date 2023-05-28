@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { PokemonContext } from './PokemonContext'
+import { useForm } from '../hook/useForm'
 
 const PokemonProvider = ({children}) => {
     const [allPokemons, setAllPokemons] = useState([])
     const [globalPokemons, setGlobalPokemons] = useState([])
 
+    const [offset, setOffset] = useState(0)
+
+    //customHook
+    const {valueSearch, onInputChange, onResetForm}=useForm({
+        valueSearch: '',
+    })
+
+
     //Estados para la app
     const [loading, setLoading] = useState(true)
     const [active, setActive] = useState(false)
 
-    const [offset, setOffset] = useState(0)
+    
     const baseURL = 'https://pokeapi.co/api/v2/'
     // llamar 50 pokemons 
     const getAllPokemons = async(limit =50)=>{
@@ -64,7 +73,12 @@ const PokemonProvider = ({children}) => {
 
     return (
         <PokemonContext.Provider value={{
-            numero: 0
+            valueSearch,
+            onInputChange,
+            onResetForm,
+            allPokemons,
+            globalPokemons,
+            getPokemonByID,
         }}>
             {children}
         </PokemonContext.Provider>
