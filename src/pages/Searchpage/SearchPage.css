@@ -1,0 +1,21 @@
+/* Card List Pokemon */
+.card-list-pokemon {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+
+
+
+/* Search Page */
+
+.p-search{
+	margin-bottom: 30px;
+	font-size: 22px;
+}
+
+.p-search span{
+    margin-left: 0;
+	font-weight: 700;
+}

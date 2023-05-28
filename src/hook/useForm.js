@@ -10,7 +10,7 @@ const useForm = (initialForm= {})=>{
             [name]: value
         })
     }
-    const onResetForm = ({target})=>{
+    const onResetForm = ()=>{
         setFormState(initialForm)
     }
     return{
