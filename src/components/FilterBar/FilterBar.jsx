@@ -2,12 +2,15 @@ import React, { useContext } from 'react'
 import './FilterBar.css'
 import { PokemonContext } from '../../context/PokemonContext'
 function FilterBar() {
-    const {active, handleCheckbox}=useContext(PokemonContext)
+    const {active, handleCheckbox,setActive}=useContext(PokemonContext)
 
     return (
         <div className={`container-filters ${active ? 'active' : ''}`}>
+			<div className='filter-header'>
+				<span>Tipo</span>
+				<img src="./../../../public/Vector.svg"alt="" onClick={()=>setActive(!active)} />
+			</div>
             <div className="filter-by-type">
-                <span>Tipo</span>
                 <div className='group-type'>
 					<input
 						type='checkbox'

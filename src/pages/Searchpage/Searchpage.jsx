@@ -7,6 +7,7 @@ import { CardPokemon } from '../../components'
 
 function Searchpage() {
   const location = useLocation()
+  console.log(location);
 
   const {globalPokemons}=useContext(PokemonContext)
   const filteredPokemons = globalPokemons.filter(pokemon => pokemon.name.includes(location.state.toLowerCase()))

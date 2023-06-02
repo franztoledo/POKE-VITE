@@ -1,10 +1,11 @@
 import React from 'react'
 import './CardPokemon.css'
 import { Link } from 'react-router-dom'
+import { capitalize } from '../../helper/helper'
 
 function CardPokemon({pokemon}) {
     return (
-        <Link to={`/pokemon/${pokemon.id}`} className='card-pokemon'>
+        <Link to={`/pokemon/${pokemon.id}`} className={`card-pokemon ${pokemon.types[0].type.name}`}>
             <div className='card-img'>
 				<img
 					src={pokemon.sprites.other.home.front_default}
@@ -12,8 +13,7 @@ function CardPokemon({pokemon}) {
 				/>
 			</div>
 			<div className='card-info'>
-				<span className='pokemon-id'>N° {pokemon.id}</span>
-				<h3>{pokemon.name}</h3>
+				<h3>{capitalize(pokemon.name)}</h3>
 				<div className='card-types'>
 					{pokemon.types.map(type => (
 						<span key={type.type.name} className={type.type.name}>

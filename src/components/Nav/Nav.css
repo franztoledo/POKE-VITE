@@ -1,51 +1,53 @@
 :root{
-	--color-primary: #DC0A2D;
+	--color-primary: ##DC0A2D;
 	--color-primary-hover: #d53b55;
 }
 
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 40px 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 12px;
 }
 .logo{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    margin-bottom: 18px;
 }
-
+.logo span {
+    color: white;
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 700;
+}
 span {
-    margin-left: 24px;
-    color: #212121;
+    margin-left: 16px;
+    color: white;
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
 }
 
-header form{
+.nav-actions{
     display: flex;
     align-items: center;
-
-    gap: 15px;
+    justify-content: space-between;
 }
 
 .form-group{
     display: flex;
     align-items: center;
-    gap: 10px;
-
-    border: 1px solid #555;
-    padding: 15px 20px;
+    width: 80%;
+    height: 36px;
+    gap: 8px;
+    background-color: white;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+    padding: 8px 12px;
     border-radius: 25px;
 }
-.form-group:hover{
-    box-shadow: 0 1px 6px rgba(32,33,36,.28);
-}
-
 .form-group input{
+    width: 100%;
     font-family: inherit;
-    width: 300px;
     border: none;
     outline: none;
     font-size: 15px;
@@ -55,23 +57,21 @@ header form{
 .icon-search{
     width: 20px;
     height: 20px;
-    stroke: #555;
+    stroke: var(--color-primary);
 }
 
-.btn-search{
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    font-family: inherit;
-    padding: 15px 30px;
-    cursor: pointer;
-    letter-spacing: 2px;
-    background-color: var(--color-primary);
-    color: #fff;
-}
 
-.btn-search:hover{
-    background-color: var(--color-primary-hover);
-    color: #000;
-    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+.btn-fav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+}
+.btn-fav path {
+    stroke: var(--color-primary);
 }

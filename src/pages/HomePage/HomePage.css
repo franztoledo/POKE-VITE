@@ -1,19 +1,26 @@
 /* Btn Filter */
 .container-filter {
+	margin-left: 12px;
 	display: flex;
+	width: 150px;
 }
 
 .icon-filter {
+	
 	display: flex;
 	align-items: center;
 	gap: 15px;
 
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	cursor: pointer;
+}
+.icon-filter span{
+	font-size: 20px;
+	margin-left: 0;
 }
 
 .icon-filter .icon {
 	width: 30px;
 	height: 30px;
-	stroke: #555;
+	stroke: white;
 }

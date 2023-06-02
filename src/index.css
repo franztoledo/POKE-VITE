@@ -34,13 +34,12 @@
 
 body{
     font-family: 'Montserrat';
+	background-color: var(--color-primary);
+	width: 100%;
+	padding: 4px ;
+	
 }
 
-/* Globales */
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* Types of Pokemon */
 .water {

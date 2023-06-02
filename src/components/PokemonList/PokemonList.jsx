@@ -6,7 +6,7 @@ import { Loader } from '../Loader/Loader'
 
 function PokemonList() {
 
-    const {allPokemons, loading, filteredPokemons}= useContext(PokemonContext)
+    const {globalPokemons, loading, filteredPokemons}= useContext(PokemonContext)
 
     return (
         <>
@@ -14,7 +14,7 @@ function PokemonList() {
                 loading ? (
                     <Loader/>
                 ) : (
-                    <div className="card-list-pokemon container">
+                    <div className="card-list-pokemon ">
                         {
                             filteredPokemons.length ? (
                                 <>
@@ -24,7 +24,7 @@ function PokemonList() {
                                 </>
                             ):(
                                 <>
-                                {allPokemons.map(pokemon => (
+                                {globalPokemons.map(pokemon => (
                                     <CardPokemon pokemon={pokemon} key={pokemon.id}  />
                                 ))}
                                 </>
