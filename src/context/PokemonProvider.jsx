@@ -90,29 +90,7 @@ const PokemonProvider = ({children}) => {
     })
     const [filteredPokemons, setFilteredPokemons] = useState([])
 
-    const handleCheckbox= e =>{
-        setTypeSelected({
-			...typeSelected,
-			[e.target.name]: e.target.checked,
-		});
-        
-
-        if (e.target.checked) {
-			const filteredResults = globalPokemons.filter(pokemon =>
-				pokemon.types
-					.map(type => type.type.name)
-					.includes(e.target.name)
-			);
-			setFilteredPokemons([...filteredPokemons, ...filteredResults]);
-		} else {
-			const filteredResults = filteredPokemons.filter(pokemon =>
-					!pokemon.types
-						.map(type => type.type.name)
-						.includes(e.target.name)
-			);
-			setFilteredPokemons([...filteredResults]);
-		}
-    }
+    
 
  
 
@@ -129,8 +107,7 @@ const PokemonProvider = ({children}) => {
             active,
             setActive,
             //filter checkbox
-            handleCheckbox,
-			filteredPokemons,
+            
         }}>
             {children}
         </PokemonContext.Provider>
