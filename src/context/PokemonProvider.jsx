@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { PokemonContext } from './PokemonContext'
-import { useForm } from '../hook/useForm'
 //NO USAR EL CONTEXT SOLO
 const PokemonProvider = ({children}) => {
     const [allPokemons, setAllPokemons] = useState([])
@@ -9,9 +8,6 @@ const PokemonProvider = ({children}) => {
     const [offset, setOffset] = useState(0)
 
     //customHook
-    const {valueSearch, onInputChange, onResetForm}=useForm({
-        valueSearch: '',
-    })
 
 
     //Estados para la app
@@ -123,9 +119,6 @@ const PokemonProvider = ({children}) => {
 
     return (
         <PokemonContext.Provider value={{
-            valueSearch,
-            onInputChange,//no en el contexto
-            onResetForm,
             allPokemons,//
             globalPokemons,
             getPokemonByID,

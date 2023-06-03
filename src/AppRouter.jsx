@@ -8,10 +8,9 @@ export const AppRouter = () => {
     <Routes>
         <Route path='/' element={<Nav/>}>
             <Route index element={<HomePage/>}/>
-            <Route path='pokemon/:id' element={<PokemonPage/>}/>
-            <Route path='search' element={<Searchpage/>}/> 
+            <Route path='favorites' element={<Searchpage/>}/> 
         </Route>
-        <Route path='*' element={<Navigate to='/'/>}/>
+        <Route path='pokemon/:id' element={<PokemonPage/>}/>
     </Routes>
   )
 }

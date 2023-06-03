@@ -4,7 +4,7 @@ import { PokemonContext } from '../../context/PokemonContext'
 import { CardPokemon } from '../CardPokemon/CardPokemon'
 import { Loader } from '../Loader/Loader'
 
-function PokemonList() {
+function PokemonList({searchedPokemons}) {
 
     const {globalPokemons, loading, filteredPokemons}= useContext(PokemonContext)
 
@@ -24,7 +24,7 @@ function PokemonList() {
                                 </>
                             ):(
                                 <>
-                                {globalPokemons.map(pokemon => (
+                                {searchedPokemons.map(pokemon => (
                                     <CardPokemon pokemon={pokemon} key={pokemon.id}  />
                                 ))}
                                 </>
