@@ -1,0 +1,50 @@
+/* Nav */
+.nav-favorites {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 12px 12px 12px;
+}
+.nav-favorites h3{
+	padding: 4px;
+	width: 70%;
+	text-align: center;
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+	color: white;
+	border-radius: 8px;
+	font-size: 28px;
+    line-height	: 28px;
+    font-weight: 700;
+}
+.btn-clear-favorites{
+	background-color: white;
+	margin: 16px 0;
+	box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.2);
+	color: #333;
+	padding: 4px 8px;
+	font-size: 16px;
+	border-radius: 8px;
+}
+.btn-clear-favorites:hover{
+	background-color: var(--color-primary);
+	box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.25) inset;
+	
+	color: white;
+}
+
+.card-list-pokemon-fav {
+	border-radius: 8px;
+	width: 100%;
+	height: auto;
+	padding: 48px 0;
+	font-size: 28px;
+	line-height	: 32px;
+    font-weight: 500;
+	background-color: white;
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+	text-align: center;
+	
+}
+.icon-info{
+	margin-top: 24px;
+}
