@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
 import './HomePage.css'
-import { FilterBar, PokemonList } from '../../components'
+import { CardPokemon, FilterBar, Loader, PokemonList } from '../../components'
 import { PokemonContext } from '../../context/PokemonContext'
 import { Link } from 'react-router-dom'
 
 
+
 function HomePage() {
-	const {globalPokemons}= useContext(PokemonContext)
+	const {globalPokemons,loading}= useContext(PokemonContext)
 	const {active, setActive}=useContext(PokemonContext)
 	const [searchValue, setSearchValue]=React.useState('')
 	const [typeSelected, setTypeSelected] = useState({
@@ -116,11 +117,17 @@ function HomePage() {
 				<span>Filtrar</span>
 			</div>
 	  	</div>
-		<PokemonList 
-			
-			searchedPokemons={searchedPokemons}
-			filteredPokemons={filteredPokemons}
-		/>
+		{
+                loading ? (
+                    <Loader/>
+                ) : (
+                    <PokemonList className="card-list-pokemon ">
+                        {searchedPokemons.map(pokemon => (
+                            <CardPokemon pokemon={pokemon} key={pokemon.id} />
+                        ))}
+                    </PokemonList>
+                )
+        }
 		<FilterBar
 			handleCheckbox={handleCheckbox}
 		/>

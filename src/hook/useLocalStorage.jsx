@@ -17,6 +17,9 @@ export const useLocalStorage = (key) => {
     const filtered = items.filter((item) => item.id !== id);
     setItems(filtered);
   };
+  const removeItems = (item) => {
+    setItems([]);
+  };
 
-  return { items, addItem, removeItem };
+  return { items, addItem, removeItem,removeItems };
 };

@@ -1,27 +1,12 @@
 import React, { useContext } from 'react'
 import './PokemonList.css'
-import { PokemonContext } from '../../context/PokemonContext'
-import { CardPokemon } from '../CardPokemon/CardPokemon'
-import { Loader } from '../Loader/Loader'
-
-function PokemonList({searchedPokemons}) {
-
-    const { loading}= useContext(PokemonContext)
-
+function PokemonList({children}) {
     return (
-        <>
-            {
-                loading ? (
-                    <Loader/>
-                ) : (
-                    <div className="card-list-pokemon ">
-                        {searchedPokemons.map(pokemon => (
-                            <CardPokemon pokemon={pokemon} key={pokemon.id} />
-                        ))}
-                    </div>
-                )
-            }
-        </>
+    
+        <div className="card-list-pokemon ">
+            {children}
+        </div>
+                
     )
 }
 

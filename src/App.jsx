@@ -1,11 +1,13 @@
 import { AppRouter } from './AppRouter'
 import { PokemonProvider } from './context/PokemonProvider'
+import { SessionContextProvider } from './context/SessionContext'
 function App() {
   return (
-    <PokemonProvider>
+    <SessionContextProvider>
+      <PokemonProvider>
       <AppRouter/>
-    </PokemonProvider>
-    
+      </PokemonProvider>
+    </SessionContextProvider>
   )
 }
 
