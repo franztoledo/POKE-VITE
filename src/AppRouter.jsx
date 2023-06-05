@@ -4,6 +4,7 @@ import { Nav } from './components/Nav/Nav'
 import { HomePage, PokemonPage, FavoritesPage } from './pages'
 
 export const AppRouter = () => {
+  
   return (
     <Routes>
         <Route path='/' element={<Nav/>}>

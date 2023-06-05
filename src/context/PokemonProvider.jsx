@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { PokemonContext } from './PokemonContext'
+import { baseURL } from '../helper/helper'
 //NO USAR EL CONTEXT SOLO
 const PokemonProvider = ({children}) => {
     const [allPokemons, setAllPokemons] = useState([])
@@ -15,7 +16,7 @@ const PokemonProvider = ({children}) => {
     const [active, setActive] = useState(false)
 
     
-    const baseURL = 'https://pokeapi.co/api/v2/'
+    
     // llamar 50 pokemons 
     const getAllPokemons = async(limit =50)=>{
         
@@ -49,11 +50,7 @@ const PokemonProvider = ({children}) => {
 
     //POR ID
 
-    const getPokemonByID = async(id)=>{
-        const res = await fetch(`${baseURL}pokemon/${id}`)
-        const data = await res.json()
-        return data
-    }
+    
 
 
     useEffect(()=>{
@@ -64,34 +61,6 @@ const PokemonProvider = ({children}) => {
         getGlobalPokemons()
     },[])
 
-    //Filter Function + state
-
-    const [typeSelected, setTypeSelected] = useState({
-        grass: false,
-		normal: false,
-		fighting: false,
-		flying: false,
-		poison: false,
-		ground: false,
-		rock: false,
-		bug: false,
-		ghost: false,
-		steel: false,
-		fire: false,
-		water: false,
-		electric: false,
-		psychic: false,
-		ice: false,
-		dragon: false,
-		dark: false,
-		fairy: false,
-		unknow: false,
-		shadow: false,
-    })
-    const [filteredPokemons, setFilteredPokemons] = useState([])
-
-    
-
  
 
 
@@ -99,14 +68,13 @@ const PokemonProvider = ({children}) => {
         <PokemonContext.Provider value={{
             allPokemons,//
             globalPokemons,
-            getPokemonByID,
+     
             //loader
             loading,
             setLoading,
             //filter
             active,
             setActive,
-            //filter checkbox
             
         }}>
             {children}

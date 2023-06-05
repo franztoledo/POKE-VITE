@@ -34,7 +34,7 @@ function CardPokemon({pokemon}) {
 			<Link to={`/pokemon/${pokemon.id}`} className={`card-pokemon ${pokemon.types[0].type.name}`}>
 				<div className='card-img'>
 					<img
-						src={pokemon.sprites.other.home.front_default}
+						src={pokemon.sprites.other.home.front_default || '../../../public/image.svg'}
 						alt={`Pokemon ${pokemon.name}`}
 					/>
 				</div>
