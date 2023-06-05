@@ -7,5 +7,5 @@ export default defineConfig({
     port: 3000,
   },
   plugins: [react()],
-  base: "/POKE-VITE/"
+  base: "https://franztoledo.github.io/POKE-VITE"
 })
