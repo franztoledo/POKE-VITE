@@ -29,8 +29,8 @@
 	position: absolute;
 	top: 0px;
 	background-color: none;
-	width: 94px;
-	height: 94px;
+	width: 100px;
+	height: 100px;
 }
 
 .card-info {
@@ -50,7 +50,7 @@
 .card-info h3 {
 	width:100%;
 	text-align: center;
-	margin-top: 28px;
+	margin-top: 36px;
 	font-size: 12px;
 	color: #333;
 }

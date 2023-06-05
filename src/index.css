@@ -39,7 +39,10 @@ body{
 	padding: 4px ;
 	
 }
-
+#root{
+	margin: 0 auto 0;
+	max-width: 1024px;
+}
 
 /* Types of Pokemon */
 .water {
