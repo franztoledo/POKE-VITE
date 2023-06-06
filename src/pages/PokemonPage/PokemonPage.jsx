@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Loader } from '../../components'
 import { baseURL, capitalize } from '../../helper/helper'
 import'./PokemonPage.css'
-import { PokeballIconBig } from '../../assets/icon'
+import { ArrowBack, PokeballIconBig } from '../../assets/icon'
 import { HeightIcon, WeightIcon } from '../../assets/stats'
 import { BaseStats } from '../../components/BaseStats/BaseStats'
 
@@ -41,7 +41,7 @@ function PokemonPage() {
 						<div className='header-main-pokemon-nav'>
 							<div>
 								<Link to='/'>
-									<img src="./../../../public/ArrowBack.svg" alt="" />
+									<ArrowBack className='img'/>
 								</Link>
 								<h1>{capitalize(pokemon.name)}</h1>
 							</div>

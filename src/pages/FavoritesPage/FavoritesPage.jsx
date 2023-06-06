@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { PokemonContext } from '../../context/PokemonContext'
 import './FavoritesPage.css'
 import { PokemonList } from '../../components'
-import { PokeballIconSmall } from '../../assets/icon'
+import { PokeballIconSmall, PokemonOscuro } from '../../assets/icon'
 import { SessionContext } from '../../context/SessionContext'
 import { CardPokemonFav } from '../../components/CardPokemon/CardPokemonFav'
 
@@ -26,7 +26,7 @@ function FavoritesPage() {
 		{ favorites.length == 0 ?
 			(<div className="card-list-pokemon-fav">
 				<p>AÑADE TU PRIMER POKEMON FAVORITO!</p>
-				<img src='./../../../public/image.svg' className='icon-info'/>
+				<PokemonOscuro className='img'/>
 			</div>
       ):(
           <PokemonList className="card-list-pokemon"  isSlider={false}>
