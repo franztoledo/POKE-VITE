@@ -26,7 +26,7 @@ function FavoritesPage() {
 		{ favorites.length == 0 ?
 			(<div className="card-list-pokemon-fav">
 				<p>AÑADE TU PRIMER POKEMON FAVORITO!</p>
-				<img src='../../../public/image.svg' className='icon-info'/>
+				<img src='./../../../public/image.svg' className='icon-info'/>
 			</div>
       ):(
           <PokemonList className="card-list-pokemon"  isSlider={false}>

@@ -41,7 +41,7 @@ function PokemonPage() {
 						<div className='header-main-pokemon-nav'>
 							<div>
 								<Link to='/'>
-									<img src="../../../public/ArrowBack.svg" alt="" />
+									<img src="./../../../public/ArrowBack.svg" alt="" />
 								</Link>
 								<h1>{capitalize(pokemon.name)}</h1>
 							</div>
