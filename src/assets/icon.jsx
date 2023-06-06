@@ -44,7 +44,7 @@ export const PokeballIconBig = ({ ...props }) => {
   export const PokemonOscuro = ({ ...props }) => {
     return(
       <svg {...props} width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <g style="mix-blend-mode:darken">
+      <g style="mixBlendMode:darken">
       <rect width="200" height="200" fill="url(#pattern0)"/>
       </g>
       <defs>
